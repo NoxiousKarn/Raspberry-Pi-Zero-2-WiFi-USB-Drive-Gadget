@@ -42,8 +42,8 @@ read -p "Press ENTER to continue or CTRL+C to cancel"
 
 # --- Enable dwc2 overlay --------------------------------------
 
-echo "Updating /boot/config.txt..."
-grep -qxF "dtoverlay=dwc2" /boot/config.txt || echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt >/dev/null
+echo "Updating /boot/firmware/config.txt..."
+grep -qxF "dtoverlay=dwc2" /boot/firmware/config.txt || echo "dtoverlay=dwc2" | sudo tee -a /boot/firmware/config.txt >/dev/null
 
 echo "Updating /etc/modules-load.d/modules.conf..."
 grep -qxF "dwc2" /etc/modules-load.d/modules.conf || echo "dwc2" | sudo tee -a /etc/modules-load.d/modules.conf >/dev/null
