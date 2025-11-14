@@ -1,10 +1,7 @@
 
 ---
 
-### **06_faq.md**
-
-```markdown
-# FAQ
+## **FAQ**
 
 ### Can the USB be NTFS or exFAT?
 Yes, but FAT32 is recommended for compatibility.
