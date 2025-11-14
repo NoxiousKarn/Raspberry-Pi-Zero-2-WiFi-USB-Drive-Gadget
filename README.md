@@ -3,6 +3,10 @@ Turn a **Raspberry Pi Zero 2 W** into a **wireless USB flash drive** accessible 
 
 Great for 3D printers or any device that needs files added to a thumb drive frequently.
 
+Inspiration: https://youtu.be/iDgQ7o_yZgU?si=pctKAqhMNQ9P6GsT
+
+Old Write-up: https://magazine.raspberrypi.com/articles/pi-zero-w-smart-usb-flash-drive
+
 ---
 
 ![OS](https://img.shields.io/badge/OS-Raspberry%20Pi%20OS%20Lite-red)
