@@ -3,9 +3,6 @@
 
 ### **04_how_it_works.md**
 
-```markdown
-# System Architecture
-
 ## USB Gadget
 The Pi emulates a USB mass storage device using:
 - dwc2 overlay
