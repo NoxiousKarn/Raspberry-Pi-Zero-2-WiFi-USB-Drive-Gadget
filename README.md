@@ -57,7 +57,8 @@ You can add or remove files wirelessly, and the connected device will automatica
 
 Use curl to copy the script from this repository to your Raspberry Pi and run it:
 ```bash
-curl -sSL https://raw.githubusercontent.com/NoxiousKarn/Raspberry-Pi-Zero-2-WiFi-USB-Drive-Gadget/refs/heads/main/setup_wifi_drive.sh | sudo bash
+sudo mkdir -p /Scripts && sudo wget -O /Scripts/setup_wifi_drive.sh https://raw.githubusercontent.com/NoxiousKarn/Raspberry-Pi-Zero-2-WiFi-USB-Drive-Gadget/refs/heads/main/setup_wifi_drive.sh && sudo chmod +x /Scripts/setup_wifi_drive.sh && sudo /Scripts/setup_wifi_drive.sh
+
 ```
 The script will interactively ask for:
 
