@@ -52,33 +52,34 @@ You can add or remove files wirelessly, and the connected device will automatica
 ## ⚙️ Running the Automated Setup Script
 
 Copy the script from this repository to your Raspberry Pi and run:
-
+```bash
 chmod +x setup_wifi_drive.sh && sudo ./setup_wifi_drive.sh
-
+```
 The script will interactively ask for:
 
-Size of virtual USB drive (ex: 2G, 4G, 512M)
-
-USB read-only (1) or read/write (0) 
-
-Samba share name (ex: usb, movies, music)
-
-Linux user for Samba ownership
-
-Auto-remount timeout in seconds
+1. Size of virtual USB drive (ex: 2G, 4G, 512M)
+2. USB read-only or read/write
+3. Samba share name (ex: usb, movies, music)
+4. Linux user for Samba ownership
+5. Auto-remount timeout in seconds
 
 It then:
 
 ✔ Creates /piusb.bin
-✔ Formats it as FAT32
-✔ Configures USB gadget mode
-✔ Creates /mnt/usb_share
-✔ Installs Samba and watchdog
-✔ Creates a Python file-change detector
-✔ Creates and activates a systemd service
-✔ Enables automatic USB remounting on file changes
 
-## (Warning!! USB read/write can corrupt the SD card if both USB and Samba are writing to the pi. Read-only is recommended, but it's your hardware, and I'm not your Dad, do what you want.)
+✔ Formats it as FAT32
+
+✔ Configures USB gadget mode
+
+✔ Creates /mnt/usb_share
+
+✔ Installs Samba and watchdog
+
+✔ Creates a Python file-change detector
+
+✔ Creates and activates a systemd service
+
+✔ Enables automatic USB remounting on file changes
 
 ## 🔌 Using the Pi as a USB Gadget
 
@@ -104,33 +105,49 @@ Remounts the gadget
 
 This forces TVs, stereos, etc. to refresh the drive contents.
 
+## 🗑 Running the Uninstall Script
+Copy uninstall_wifi_drive.sh to your Pi, then run:
+```bash
+chmod +x uninstall_wifi_drive.sh
+sudo ./uninstall_wifi_drive.sh
+```
+This removes:
+
+1. USB gadget config
+2. Python watchdog service
+3. Samba share
+4. /piusb.bin
+5. /mnt/usb_share
+6. Systemd service
+
+
 ## 🐛 Troubleshooting
-Device does not detect USB drive
+The device does not detect the USB drive:
 
 Ensure you are using the USB data port, not PWR-IN
 
 Some cables are charge-only — use a proper USB data cable
 
 Reboot the Pi:
-
+```bash
 sudo reboot
-
+```
 Samba share not visible
 
 Ensure Pi is on WiFi:
-
+```bash
 iwconfig
-
+```
 Restart Samba:
-
+```bash
 sudo systemctl restart smbd
-
+```
 /piusb.bin too large
 
 Make sure your SD card has enough free space:
-
+```bash
 df -h
-
+```
 ## 📘 License
 
 MIT License / Open Source — modify freely.
