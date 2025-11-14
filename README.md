@@ -1,5 +1,5 @@
 # Raspberry Pi Zero 2 – WiFi USB Drive Gadget  
-Turn a **Raspberry Pi Zero / Zero 2 W** into a **wireless USB flash drive** accessible via WiFi. 
+Turn a **Raspberry Pi Zero 2 W** into a **wireless USB flash drive** accessible via WiFi. 
 
 Great for 3D printers or any device that needs files added to a thumb drive frequently.
 
