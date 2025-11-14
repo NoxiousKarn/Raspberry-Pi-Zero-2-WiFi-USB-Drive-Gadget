@@ -8,10 +8,10 @@
 Restart Samba:
 ```bash
 sudo systemctl restart smbd
-
+```
 Not Enough Space
 
 Check SD card free space:
-
+```bash
 df -h
-
+```
