@@ -1,8 +1,6 @@
 # Raspberry Pi Zero 2 – WiFi USB Drive Gadget  
 Turn a **Raspberry Pi Zero / Zero 2 W** into a **wireless USB flash drive** accessible via WiFi.
 
-![Project Diagram](images/overview-diagram.png)
-
 ---
 
 ## 📛 Badges
@@ -28,7 +26,7 @@ You can update files wirelessly and the connected device will automatically refr
 
 ## 📦 Features
 
-- Automatic creation of a **virtual USB flash drive** (`piusb.bin`)
+- Automatic creation of a **virtual USB flash drive** 
 - Automatic formatting (FAT32)
 - Network file sharing via **Samba**
 - Auto-remount via **Python watchdog**
@@ -41,27 +39,3 @@ You can update files wirelessly and the connected device will automatically refr
   - Storage size  
 
 ---
-
-## 📂 Repository Structure
-
-```plaintext
-raspberrypi-wifi-usb-drive/
-│
-├── README.md
-├── LICENSE
-├── setup_wifi_drive.sh
-├── uninstall_wifi_drive.sh
-│
-├── docs/
-│   ├── 01_installing_raspberry_pi_os.md
-│   ├── 02_enable_ssh_and_wifi.md
-│   ├── 03_running_the_setup_script.md
-│   ├── 04_how_it_works.md
-│   ├── 05_troubleshooting.md
-│   └── 06_faq.md
-│
-└── images/
-    ├── overview-diagram.png
-    ├── pi-zero-usb-port.png
-    ├── samba-share-example.png
-    └── system-architecture.png
