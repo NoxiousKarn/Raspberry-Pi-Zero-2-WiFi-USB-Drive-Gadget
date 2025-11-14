@@ -2,9 +2,9 @@
 
 ## Enable SSH
 Create an empty file on the SD card boot partition:
-
+```bash
 ssh
-
+```
 ## Enable WiFi
 Create `wpa_supplicant.conf`:
 
